@@ -1,6 +1,6 @@
 # Watch Case STL Version Notes
 
-These are the three most recent design iterations prepared for a future GitHub repository. File names intentionally avoid brand or project-reference wording.
+Commit notes for each iteration of the prototype watch case, one commit per version.
 
 ## Suggested Commit 1
 
@@ -136,3 +136,32 @@ Adds a follow-up surface refinement to make the upper case curvature match the l
 
 This version keeps the enclosed back, hidden strap bridge, approximately 24.0 mm strap lane, enlarged crown, and future screw-land layout. The main change is the outer case cross-section: the upper side now starts tapering inward earlier, with a larger-radius top roundover instead of a mostly vertical side wall ending in a small top corner.
 ```
+
+## Suggested Commit 6 (V8)
+
+Files:
+- `GH_watch_case_V8_42mm/` (STL parts and section diagram)
+- `step/` (STEP solids)
+- `cad/` (parametric build123d source, shared by future versions)
+- `README.md`
+
+Commit title:
+```text
+Add watch case V8: parametric 42 mm case with crown at 12 and short strap bridge
+```
+
+Commit notes:
+```text
+Rebuilds the case from scratch as a parametric CAD model (build123d) instead of a hand-made mesh.
+
+- One continuous, curvature-smooth outer profile (no kinks in polished reflections)
+- Bezel inner edge 34.7 mm, visible dial 32.4 mm
+- 42.00 mm wide, 13.75 mm total, thickness/diameter 0.327
+- Stack built around a Miyota 9039: 0.4 rotor clearance, 1.75 hand stack + 0.4, 34.0 x 1.2 flat crystal
+- Crown at 12: clous de Paris, 2 rows x 16 pyramids, collar tucked into a counterbore
+- 22 mm strap through a 23.0 x 2.8 mm tunnel; bridge only 14 mm long so the strap drapes
+- 4 x standard M1.4 x 4 caseback screws, 2 at 12 and 2 at 6, heads flush in the strap channel past the bridge
+- Print fits per Foundry I/O's 0.2 mm advice (pilot holes, tube hole, crystal seat, movement ring); fit-checked with a virtual standard screw
+- Separate parts: case body, caseback+bridge, crown, movement ring (STL + STEP)
+
+Stem height (1.55 mm below the movement dial side) is an estimate and must be verified before CNC.
