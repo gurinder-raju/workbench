@@ -119,3 +119,20 @@ Mesh validation notes:
 
 This remains a resin-prototype STL and design-intent mesh. It should be rebuilt as clean parametric CAD before production machining.
 ```
+
+## Suggested Commit 5 (V7)
+
+File:
+- `GH_watch_case_V7_symmetric_roundover.stl`
+
+Commit title:
+```text
+Add watch case V7 with symmetric roundover
+```
+
+Commit notes:
+```text
+Adds a follow-up surface refinement to make the upper case curvature match the lower roundover more closely.
+
+This version keeps the enclosed back, hidden strap bridge, approximately 24.0 mm strap lane, enlarged crown, and future screw-land layout. The main change is the outer case cross-section: the upper side now starts tapering inward earlier, with a larger-radius top roundover instead of a mostly vertical side wall ending in a small top corner.
+```
