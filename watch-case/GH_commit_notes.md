@@ -80,3 +80,42 @@ Key changes from V2:
 This is the preferred current prototype file. It remains a faceted STL design-intent model, not final production CNC CAD.
 ```
 
+## Suggested Commit 4
+
+File:
+- `GH_watch_case_V4_enclosed_pebble_case.stl`
+
+Commit title:
+```text
+Add watch case V4 with enclosed back and rounded pebble top
+```
+
+Commit notes:
+```text
+Adds a revised complete watch case prototype STL based on physical print feedback.
+
+This version improves the case architecture, strap handling, and visual proportions. The rear of the watch is now enclosed before the strap bridge, so the strap path is separated from the internal watch cavity. The underside bridge remains shortened in the 12-to-6 direction to leave future fastening zones, while the usable strap lane is relaxed to approximately 24.0 mm so a 22 mm strap has enough room to be threaded and adjusted without excessive side-to-side looseness.
+
+Key changes from V3:
+- Adds an enclosed rear caseback behind the movement cavity
+- Keeps the hidden strap bridge below the enclosed caseback
+- Sets the usable strap lane to approximately 24.0 mm for a 22 mm strap
+- Shortens the underside bridge in the 12-to-6 direction to reserve future screw/fastener space
+- Adds subtle rear screw-land pads as layout placeholders
+- Further rounds the top case surface to avoid a flat bezel shelf
+- Widens the apparent bezel shoulder by reducing the front opening to 35.0 mm
+- Raises the top shoulder into a more pronounced continuous pebble-like dome
+- Enlarges and brings the 12 o'clock crown closer to the case
+- Adds a stylized faceted crown texture for proportion review
+- Rebuilds mesh winding to remove flipped-normal style orientation issues
+
+Mesh validation notes:
+- 42.0 mm main case width
+- 26,848 triangular facets
+- 0 zero-area faces detected
+- 0 open boundary edges detected
+- 0 nonmanifold edges detected
+- 0 same-direction shared-edge conflicts detected after orientation pass
+
+This remains a resin-prototype STL and design-intent mesh. It should be rebuilt as clean parametric CAD before production machining.
+```
