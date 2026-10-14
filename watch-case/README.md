@@ -21,7 +21,7 @@ A prototype 42 mm lugless watch case with the crown at 12, and a 22 mm strap tha
 | File | What it is |
 |---|---|
 | `…_case_body.stl` | Upper shell: bezel, crystal seat, rehaut, movement bore, crown-tube hole at 12, 4 pilot holes for M1.4 screws |
-| `…_caseback_bridge.stl` | Lower shell: 1.6 mm caseback plate, strap tunnel from 12 to 6, 14 mm bridge, 4 flush seats for standard M1.4 heads |
+| `…_caseback_bridge.stl` | Lower shell: 1.6 mm caseback plate, strap tunnel from 12 to 6, 14 mm bridge, 4 flush seats for M1.4 wafer-head screws |
 | `…_crown.stl` | Clous de Paris crown, 2 rows × 16 pyramids, smooth collar, tube recess |
 | `…_movement_ring.stl` | Spacer that centres the 26 mm movement in the 33.5 mm bore, with a slot for the stem |
 | `…_assembly_preview.stl` | All parts in position, for viewing only |
@@ -50,7 +50,7 @@ The outer profile is one curvature-continuous curve (`profile.py`), so polished 
 - **Crystal**: flat sapphire, Ø34.0 × 1.2 mm. The printed seat is 34.1 mm, so glue it in.
 - **Dial**: Ø33.4 × 0.5 mm, with Ø32.4 visible. It's clamped between the rehaut and the movement ring.
 - **Crown tube**: OD 2.5 mm, about 4.6 mm long. That's 3.6 mm through the case wall plus about 1 mm into the crown's 1.8 mm recess. The printed hole is 2.7 mm, so glue the tube in. The stem runs through it into the crown. A printed crown can't hold the stem's 0.9 mm thread, so glue the stem in once it's cut to length, or use a metal crown for test fits.
-- **Caseback screws**: 4 × **M1.4 × 4 mm**, standard stainless cheese head (ISO 1207 / DIN 84) or pan head (DIN 7985). Any head up to Ø2.6 × 0.9 mm sits flush. There are two at 12 and two at 6, in the strap channel just past the bridge. They sit under the strap when worn and are reached from underneath with the strap out. Each screw grips 3.4 mm into the case.
+- **Caseback screws**: 4 × **M1.4 × 4 mm** stainless, flat round (wafer) head, Ø2.5 × 0.5 mm, flat underneath, 0.3 mm pitch. The head sits flush in a Ø2.9 × 0.5 mm seat. There are two at 12 and two at 6, in the strap channel just past the bridge. They sit under the strap when worn and are reached from underneath with the strap out. Each screw grips 2.9 mm into the case.
 - **Strap**: 22 mm single-pass strap (one piece, no spring bars), **2.6 mm thick or less** at the case. The tunnel is 23.0 × 2.8 mm.
 
 ## Printing notes
@@ -60,12 +60,12 @@ The outer profile is one curvature-continuous curve (`profile.py`), so polished 
 - **Fits for printing.** Foundry I/O advised about 0.2 mm on pin/hole fits, so the print version uses:
   - 1.15 mm pilot holes: drive the screws in slowly, or run an M1.4 tap first.
   - 1.6 mm clearance holes in the caseback.
-  - A 2.9 mm head seat, 1.0 mm deep.
+  - A 2.9 mm head seat, 0.5 mm deep.
   - 0.1 mm per side on the movement ring.
   - A 2.7 mm crown-tube hole.
   - A 34.1 mm crystal seat.
   The four screws also centre the caseback; there's no separate centring ring.
-- **Thinnest walls on the print** (from `check_fits.py`): 0.46 mm at the screw-head seat edge, 0.53 mm between each pilot hole and the movement bore, and 0.6 mm of plate under each screw head.
+- **Thinnest walls on the print** (from `check_fits.py`): 0.46 mm at the screw-head seat edge, 0.53 mm between each pilot hole and the movement bore, and 1.1 mm of plate under each screw head.
 - In steel the case weighs about 56 g (7.0 cm³). In titanium it would be about 31 g.
 
 ## Before CNC
@@ -87,7 +87,7 @@ pip install build123d trimesh manifold3d scipy moderngl matplotlib shapely
 cd cad
 python watch.py        # STL parts -> GH_watch_case_<VERSION>_42mm/, STEP -> step/
 python section.py      # section diagram, next to the STL parts
-python check_fits.py   # test-fits a standard M1.4 x 4 screw and measures walls
+python check_fits.py   # test-fits the M1.4 x 4 wafer-head screw and measures walls
 python render.py       # optional local previews in .renders/ (git-ignored, never committed)
 ```
 
