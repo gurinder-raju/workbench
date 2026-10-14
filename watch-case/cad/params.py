@@ -80,15 +80,15 @@ LANE_W = 23.0                            # 0.5 mm per side: snug, no side-to-sid
 BRIDGE_L = 14.0                          # length along 12-6: short so the strap drapes
 
 # ---- Caseback screws: 2 at 12, 2 at 6, in the strap channel past the bridge --
-# Standard M1.4 x 4 cheese head (ISO 1207 / DIN 84: head <= 2.6 dia x 0.9) or pan head.
+# M1.4 x 4 wafer (flat round) head screw: head 2.5 dia x 0.5, pitch 0.3.
 SCREW_R = 17.85                          # >= 0.5 mm wall to the movement bore
 SCREW_X = 9.00                           # inside the 23 mm strap lane, clear of the exit fillet
 SCREW_Y = (SCREW_R ** 2 - SCREW_X ** 2) ** 0.5   # 15.41
 SCREW_TAP_D = 1.15                       # print: pilot, screw cuts its thread (CNC: 1.10 + M1.4 tap)
 SCREW_CLEAR_D = 1.60                     # clearance through the caseback plate
-SCREW_HEAD_D = 2.90                      # head seat: 0.15 mm room around a 2.6 mm head
-SCREW_HEAD_DEPTH = 1.00                  # 0.9 mm head sits 0.1 below the tunnel ceiling
-SCREW_THREAD_DEPTH = 3.80                # 4 mm screw: 0.6 mm plate + 3.4 mm in the body
+SCREW_HEAD_D = 2.90                      # head seat: 0.2 mm room around a 2.5 mm wafer head
+SCREW_HEAD_DEPTH = 0.50                  # 0.5 mm wafer head sits flush with the tunnel ceiling
+SCREW_THREAD_DEPTH = 3.30                # 4 mm screw: 1.1 mm plate + 2.9 mm in the body
 
 # ---- Movement holder ring --------------------------------------------------
 RING_OD = 2 * R_BORE - 0.20              # 33.30  (0.1 mm clearance per side for printing)

@@ -1,4 +1,4 @@
-"""Fit check: drop a standard M1.4 x 4 screw (ISO 1207 / DIN 84 max head 2.6 x 0.9)
+"""Fit check: drop the chosen M1.4 x 4 wafer-head screw (head 2.5 x 0.5)
 into each caseback position and measure the thinnest walls, on the exported meshes."""
 import warnings
 from pathlib import Path
@@ -13,7 +13,7 @@ warnings.filterwarnings("ignore")
 body = trimesh.load(P.STL_DIR / f"{P.TAG}_case_body.stl")
 back = trimesh.load(P.STL_DIR / f"{P.TAG}_caseback_bridge.stl")
 
-HEAD_D, HEAD_K, SHANK_D, LENGTH = 2.6, 0.9, 1.4, 4.0
+HEAD_D, HEAD_K, SHANK_D, LENGTH = 2.5, 0.5, 1.4, 4.0
 seat = P.Z_TUNNEL_CEIL + P.SCREW_HEAD_DEPTH          # head bearing face
 
 
@@ -66,6 +66,6 @@ for z in (P.Z_TUNNEL_CEIL + 0.05, P.Z_TUNNEL_CEIL + 0.5, seat - 0.05):
     print("  caseback wall around head seat at z=%.2f: %.2f mm" % (z, ring_walls(back, z, x, y)))
 for z in (seat + 0.3, P.Z_PARTING - 0.2):
     print("  caseback wall around clearance hole at z=%.2f: %.2f mm" % (z, ring_walls(back, z, x, y)))
-for z in (P.Z_PARTING + 0.1, P.Z_PARTING + 1.5, P.Z_PARTING + 3.5):
+for z in (P.Z_PARTING + 0.1, P.Z_PARTING + 1.5, P.Z_PARTING + P.SCREW_THREAD_DEPTH - 0.2):
     print("  body wall around pilot hole at z=%.2f: %.2f mm" % (z, ring_walls(body, z, x, y)))
 print("plate under the head: %.2f mm" % (P.Z_PARTING - seat))
