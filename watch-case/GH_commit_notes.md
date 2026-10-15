@@ -165,3 +165,51 @@ Rebuilds the case from scratch as a parametric CAD model (build123d) instead of 
 - Separate parts: case body, caseback+bridge, crown, movement ring (STL + STEP)
 
 Stem height (1.55 mm below the movement dial side) is an estimate and must be verified before CNC.
+
+## Suggested Commit 7 (V9)
+
+Files:
+- `GH_watch_case_V9_pebble42/` (STL parts and section diagram)
+- `step/` (V9 STEP solids)
+- `cad/` (seal parameters, fit checks, section drawing)
+- `README.md`
+
+Commit title:
+```text
+Add watch case V9: sealed for water resistance (crystal gasket, caseback O-ring, crown O-ring)
+```
+
+Commit notes:
+```text
+Moves the case from a display prototype toward a wearable, water-resistant watch.
+Each of the three ways water gets in now has a standard watch seal, sized to
+off-the-shelf gaskets, so this last print tests the same sealing geometry that goes to CNC.
+Target: about 3 ATM (rain, hand-washing, splashes) with the crown pushed in.
+
+Crystal
+- Seat 34.80 for a 34.0 x 1.2 crystal in a Hytrel I-ring gasket (0.45 wall x 0.90 high), 0.05 squeeze per side
+- Pressed in by a watchmaker with a crystal press, so it can be serviced (no glue)
+- Bezel crest moved out to 35.2 mm (0.838 x D) so the seat doesn't leave a knife edge
+
+Caseback
+- Spigot into the movement bore carries a 32.0 x 0.6 O-ring sealing radially against the bore (20 % squeeze, 74 % groove fill)
+- The seal doesn't depend on screw torque; the 4 M1.4 screws only retain the back
+- The spigot also centres the caseback, so no dowel pins are needed
+- 30 deg lead-in at the bore mouth so the O-ring isn't cut on assembly
+- Movement ring now sits on the spigot (3.0 mm tall)
+
+Crown
+- Standard tube design: 80.135.42 tube (2.5 case end, 3.0 crown end) is the replaceable wear surface
+- 3.0 x 0.5 O-ring in a groove inside the crown, sealing on the tube's 3.0 end (16 % squeeze); bore 2.0 deep, tube engages 1.8
+- Tube shoulder sits in a 0.5 mm pocket, so the tube fits as supplied (no filing)
+- A tubeless variant (O-ring on a crown post sealing straight in the case) was tried and rejected:
+  it makes the case the wear surface, leaves a 0.33 mm wall and needs a larger, draggier O-ring
+
+Checks and drawings
+- check_fits.py reports seal squeeze, stretch and groove fill, and checks the parts for overlaps
+- Section diagram shows the three seals and the crown tube
+- Print fits are kept per Foundry I/O's advice; README lists the CNC value for each
+
+Still to verify on the real parts before printing: stem height (1.55 mm below the dial side is an
+estimate), crystal size, tube crown-end diameter and the crystal gasket wall.
+```

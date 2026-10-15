@@ -278,5 +278,5 @@ if __name__ == "__main__":
         az, el, hw, ctr = VIEWS[name][:4]
         strap = VIEWS[name][4] if len(VIEWS[name]) > 4 else True
         scene = load_scene(with_strap=strap)
-        p = render(scene, look(az, el), outdir / f"V8_{name}.png", half_w=hw, center=ctr)
+        p = render(scene, look(az, el), outdir / f"{P.VERSION}_{name}.png", half_w=hw, center=ctr)
         print("wrote", p)

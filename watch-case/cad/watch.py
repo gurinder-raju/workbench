@@ -1,11 +1,11 @@
-"""V8 42 mm pebble case - parametric build123d model.
+"""42 mm pebble case - parametric build123d model.
 
 Builds four parts and exports STL (printing) + STEP (CAD / CNC):
-    case_body       - pebble upper shell, crystal seat, rehaut, movement bore,
-                      crown tube at 12, M1.4 tapped holes for the caseback
-    caseback_bridge - lower shell that continues the pebble, locating spigot,
-                      strap tunnel 12->6 with a short bridge, 4 screw seats
-    crown           - clous de Paris crown (2 rows x 16 pyramids)
+    case_body       - pebble upper shell, gasketed crystal seat, rehaut, movement
+                      bore, crown tube pocket at 12, M1.4 tapped holes for the caseback
+    caseback_bridge - lower shell that continues the pebble, spigot with a radial
+                      O-ring groove, strap tunnel 12->6 with a short bridge, 4 screw seats
+    crown           - clous de Paris crown (2 rows x 16 pyramids), internal O-ring groove
     movement_ring   - spacer that holds the 26 mm Miyota in the 33.5 mm bore
 
 Run:  python watch.py  [outdir]
@@ -56,24 +56,29 @@ def crown_axis_loc(y):
 
 def build_body(peb):
     body = peb & slab(P.Z_PARTING, P.Z_TOP + 1)
-    ch = 0.20  # small chamfer on the crystal-seat edge -> thin bright ring
+    ch = 0.10  # small chamfer on the crystal-seat edge -> thin bright ring
+    rs = P.R_CRYSTAL_SEAT  # crystal + I-ring gasket, pressed in
     inner = revolve_rz([
         (0, P.Z_PARTING - 1),
-        (P.R_BORE, P.Z_PARTING - 1),
+        (P.R_BORE + P.BORE_LEAD_R, P.Z_PARTING - 1),
+        (P.R_BORE + P.BORE_LEAD_R, P.Z_PARTING),
+        (P.R_BORE, P.Z_PARTING + P.BORE_LEAD_H),   # lead-in so the O-ring isn't cut
         (P.R_BORE, P.Z_DIAL_TOP),
         (P.R_REHAUT, P.Z_DIAL_TOP),
         (P.R_REHAUT, P.Z_CRYSTAL_BOT),
-        (P.R_CRYSTAL + P.CRYSTAL_SEAT_CLEAR, P.Z_CRYSTAL_BOT),
-        (P.R_CRYSTAL + P.CRYSTAL_SEAT_CLEAR, P.Z_TOP - ch),
-        (P.R_CRYSTAL + P.CRYSTAL_SEAT_CLEAR + ch, P.Z_TOP),
-        (P.R_CRYSTAL + P.CRYSTAL_SEAT_CLEAR + ch, P.Z_TOP + 1),
+        (rs, P.Z_CRYSTAL_BOT),
+        (rs, P.Z_TOP - ch),
+        (rs + ch, P.Z_TOP),
+        (rs + ch, P.Z_TOP + 1),
         (0, P.Z_TOP + 1),
     ])
     body = body - inner
     # crown tube bore + counterbore for the crown collar at 12
     tube = crown_axis_loc(P.R_BORE - 1) * Pos(0, 0, 4) * Cylinder(P.TUBE_HOLE_D / 2, 8)
     spot = crown_axis_loc(P.SPOT_FACE_Y) * Pos(0, 0, 5) * Cylinder(P.SPOT_FACE_R, 10)
-    body = body - tube - spot
+    shoulder = crown_axis_loc(P.SPOT_FACE_Y - P.TUBE_SHOULDER_DEPTH) * Pos(0, 0, 5) * Cylinder(
+        P.TUBE_SHOULDER_D / 2, 10)
+    body = body - tube - spot - shoulder
     # tapped holes for caseback screws
     for sx in (-1, 1):
         for sy in (-1, 1):
@@ -86,6 +91,18 @@ def build_body(peb):
 
 def build_caseback(peb):
     lower = peb & slab(-1, P.Z_PARTING)
+    # spigot up into the movement bore, with a radial O-ring groove on its outside
+    z0 = P.Z_PARTING
+    lower = lower + revolve_rz([
+        (P.RING_ID / 2, z0 - 0.5),
+        (P.SPIGOT_OD / 2, z0 - 0.5),
+        (P.SPIGOT_OD / 2, z0 + P.BACK_GROOVE_Z),
+        (P.BACK_GROOVE_D / 2, z0 + P.BACK_GROOVE_Z),
+        (P.BACK_GROOVE_D / 2, z0 + P.BACK_GROOVE_Z + P.BACK_GROOVE_W),
+        (P.SPIGOT_OD / 2, z0 + P.BACK_GROOVE_Z + P.BACK_GROOVE_W),
+        (P.SPIGOT_OD / 2, z0 + P.SPIGOT_H),
+        (P.RING_ID / 2, z0 + P.SPIGOT_H),
+    ])
     # strap channel straight through 12 -> 6, minus a short bridge under the strap.
     # The bridge is carved out of the cutting tool (not fused afterwards) so it
     # shares the pebble's wrist-side surface exactly.
@@ -150,16 +167,21 @@ def build_crown():
         crown = crown - groove
     # restore a clean skirt under the first row (it was nicked by the first groove)
     crown = crown + Pos(0, 0, z0 / 2) * Cylinder(P.CROWN_SKIRT_D / 2, z0)
-    # case-side recess for the crown tube, stem tap hole
-    crown = crown - Pos(0, 0, 0.65) * Cylinder(1.55, 2.3)        # tube recess, open at the face
-    crown = crown - Pos(0, 0, 1.8 + 0.5) * Cylinder(0.40, 1.0)   # blind, 0.4 mm floor
+    # bore over the tube's crown end, O-ring groove, blind stem hole
+    d = P.CROWN_BORE_DEPTH
+    crown = crown - Pos(0, 0, (d - 0.5) / 2) * Cylinder(P.CROWN_BORE_D / 2, d + 0.5)
+    gz = P.CROWN_GROOVE_Z
+    crown = crown - Pos(0, 0, gz + P.CROWN_GROOVE_W / 2) * Cylinder(P.CROWN_GROOVE_D / 2, P.CROWN_GROOVE_W)
+    sd = P.CROWN_STEM_HOLE_DEPTH
+    crown = crown - Pos(0, 0, d + (sd - 0.1) / 2 - 0.05) * Cylinder(P.CROWN_STEM_HOLE_D / 2, sd + 0.1)
     return crown
 
 
 def build_ring():
     od = P.RING_OD
-    h = P.Z_MOVT_TOP - P.Z_FLOOR
-    ring = Pos(0, 0, P.Z_FLOOR + h / 2) * (Cylinder(od / 2, h) - Cylinder(P.RING_ID / 2, h + 1))
+    zb = P.Z_FLOOR + P.SPIGOT_H  # sits on the caseback spigot
+    h = P.Z_MOVT_TOP - zb
+    ring = Pos(0, 0, zb + h / 2) * (Cylinder(od / 2, h) - Cylinder(P.RING_ID / 2, h + 1))
     slot_z0 = P.Z_STEM - 1.4
     slot = Pos(0, 15, (slot_z0 + P.Z_MOVT_TOP + 1) / 2) * Box(2.8, 10, P.Z_MOVT_TOP + 1 - slot_z0)
     return ring - slot
