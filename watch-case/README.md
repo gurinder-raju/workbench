@@ -21,9 +21,9 @@ A prototype 42 mm lugless watch case with the crown at 12, and a 22 mm strap tha
 | File | What it is |
 |---|---|
 | `…_case_body.stl` | Upper shell: bezel, I-ring crystal seat, rehaut, movement bore with an O-ring lead-in, crown-tube hole and shoulder pocket at 12, 4 pilot holes for M1.4 screws |
-| `…_caseback_bridge.stl` | Lower shell: 1.6 mm caseback plate, spigot with an O-ring groove, strap tunnel from 12 to 6, 14 mm bridge, 4 flush seats for M1.4 wafer-head screws |
+| `…_caseback_bridge.stl` | Lower shell: 1.49 mm caseback plate, spigot with an O-ring groove, strap tunnel from 12 to 6, 14 mm bridge, 4 flush seats for M1.4 wafer-head screws |
 | `…_crown.stl` | Clous de Paris crown, 2 rows × 16 pyramids, smooth collar, bore over the tube with an internal O-ring groove, blind stem hole |
-| `…_movement_ring.stl` | Spacer that centres the 26 mm movement in the 33.5 mm bore. It sits on the caseback spigot and has a slot for the stem |
+| `…_movement_ring.stl` | Spacer that centres the 26 mm movement in the 33.5 mm bore. It sits on the caseback spigot and has a slot for the stem. 3.00 mm tall |
 | `…_assembly_preview.stl` | All parts in position, for viewing only |
 
 ## Key dimensions
@@ -40,7 +40,7 @@ A prototype 42 mm lugless watch case with the crown at 12, and a 22 mm strap tha
 | Strap | **22 mm single-pass strap through a tunnel** |
 | Overall | **42.00 wide (3 to 9), 44.75 from 6 to the crown tip** |
 
-Vertical stack, measured from the wrist side upward: bridge 1.1, strap tunnel 2.8, caseback plate 1.6, rotor clearance 0.4, Miyota 9039 movement 3.9, dial 0.5, hands 1.75 plus 0.4 clearance, crystal 1.2, and a 0.1 mm crest above the crystal.
+Vertical stack, measured from the wrist side upward: bridge 1.1, strap tunnel 2.8, caseback plate 1.49, rotor clearance 0.4, Miyota 9039 movement 3.9, dial 0.61, hands 1.75 plus 0.4 clearance, crystal 1.2, and a 0.1 mm crest above the crystal.
 
 The outer profile is one curvature-continuous curve (`profile.py`), so polished reflections flow without kinks.
 
@@ -58,9 +58,9 @@ The goal is about 3 ATM (rain, hand-washing and splashes; no swimming), with the
 
 - **Movement**: Miyota 9039 (no date, 3 hands, 26.0 × 3.90 mm). Mount it rotated 90° so the stem exits at 12, and print the dial with 12 at the crown.
 - **Crystal**: flat, Ø34.0 × 1.2 mm (mineral for the prototype, sapphire later).
-- **Dial**: Ø33.4 × 0.5 mm, with Ø32.4 visible. It's clamped between the rehaut and the movement ring.
+- **Dial**: Ø33.4 × 0.61 mm (0.024" UV-printed stainless steel, laser-cut with a 2.0 mm centre hole), with Ø32.4 visible. It's clamped between the rehaut and the movement ring. It has no dial feet, so fix it to the movement with dial dots (thin adhesive pads). The caseback plate was thinned from 1.60 to 1.49 mm for this dial, so the case stays 13.75 mm. A 0.50 mm dial would need a 0.10 mm shim under it.
 - **Crown tube**: **80.135.42**: 2.5 mm case end, 3.0 mm crown end that's 2.5 mm long, 5.5 mm overall (Esslinger/Ofrei 80.135 series). The tube's shoulder sits in a 0.5 mm pocket, so 2.0 mm of the crown end stands proud and no filing is needed. The print hole is 2.7 mm, so glue the tube in.
-- **Caseback screws**: 4 × **M1.4 × 4 mm** stainless, flat round (wafer) head, Ø2.5 × 0.5 mm, flat underneath, 0.3 mm pitch. The head sits flush in a Ø2.9 × 0.5 mm seat. There are two at 12 and two at 6, in the strap channel just past the bridge. Each screw grips 2.9 mm into the case.
+- **Caseback screws**: 4 × **M1.4 × 4 mm** stainless, flat round (wafer) head, Ø2.5 × 0.5 mm, flat underneath, 0.3 mm pitch. The head sits flush in a Ø2.9 × 0.5 mm seat. There are two at 12 and two at 6, in the strap channel just past the bridge. Each screw grips 3.0 mm into the case.
 - **Crystal gasket**: Esslinger individual Hytrel "I" gasket, 34.0 mm (series 84.045, about $6).
 - **Caseback O-ring**: 32.0 × 0.6 mm, Esslinger .60 mm thickness O-ring gaskets (84.314.60), size 32 mm, pack of 3.
 - **Crown O-ring**: 3.0 × 0.5 mm (OD 4.0), nitrile 70: Polymax (UK) part 3X0.5N70. It's only needed for final assembly, not for the print.
@@ -82,7 +82,7 @@ The goal is about 3 ATM (rain, hand-washing and splashes; no swimming), with the
   | Movement ring | 0.1 per side | 0.05 per side |
 
   The crystal seat (34.80), the O-ring grooves and the screw seats are the same for print and CNC.
-- **Thinnest walls on the print** (from `check_fits.py`): 0.38 mm at the mouth of each pilot hole, where the bore lead-in passes; 0.53 mm higher up; 0.48 mm at the screw-head seat edge; and 0.57 mm between the crown's O-ring groove and its pyramids.
+- **Thinnest walls on the print** (from `check_fits.py`): 0.38 mm at the mouth of each pilot hole, where the bore lead-in passes; 0.53 mm higher up; 0.48 mm at the screw-head seat edge; 0.57 mm between the crown's O-ring groove and its pyramids; and 0.99 mm of plate under each screw head. Each screw grips 3.0 mm into the body.
 - A printed crown won't hold the stem's thread for long. For test fits, glue the stem in once it's cut to length.
 
 ## Before CNC
