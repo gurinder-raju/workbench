@@ -60,7 +60,7 @@ The goal is about 3 ATM (rain, hand-washing and splashes; no swimming), with the
 - **Crystal**: flat, Ø34.0 × 1.2 mm (mineral for the prototype, sapphire later).
 - **Dial**: Ø33.4 × 0.61 mm (0.024" UV-printed stainless steel, laser-cut with a 2.0 mm centre hole), with Ø32.4 visible. It's clamped between the rehaut and the movement ring. It has no dial feet, so fix it to the movement with dial dots (thin adhesive pads). The caseback plate was thinned from 1.60 to 1.49 mm for this dial, so the case stays 13.75 mm. If a 0.50 mm dial is used instead, set `DIAL_T` back to 0.50 and `BACK_PLATE_T` to 1.60 and rebuild. Don't shim or raise the ring: that lifts the movement and puts the stem off-centre in the crown tube.
 - **Crown tube**: **80.135.42**: 2.5 mm case end, 3.0 mm crown end that's 2.5 mm long, 5.5 mm overall (Esslinger/Ofrei 80.135 series). The tube's shoulder sits in a 0.5 mm pocket, so 2.0 mm of the crown end stands proud and no filing is needed. The print hole is 2.7 mm, so glue the tube in.
-- **Caseback screws**: 4 × **M1.4 × 4 mm** stainless, flat round (wafer) head, Ø2.5 × 0.5 mm, flat underneath, 0.3 mm pitch. The head sits flush in a Ø2.9 × 0.5 mm seat. There are two at 12 and two at 6, in the strap channel just past the bridge. Each screw grips 3.0 mm into the case.
+- **Caseback screws**: 4 × **M1.4 × 4 mm** stainless, flat round (wafer) head, flat underneath, 0.3 mm pitch. Measured on the screws in hand: head Ø2.4 × 0.66 mm, 3.89 mm under the head, thread 1.35 mm. The head sits 0.04 mm below the tunnel ceiling in a Ø2.9 × 0.70 mm seat. There are two at 12 and two at 6, in the strap channel just past the bridge. Each screw grips 3.1 mm into the case.
 - **Crystal gasket**: Esslinger individual Hytrel "I" gasket, 34.0 mm (series 84.045, about $6).
 - **Caseback O-ring**: 32.0 × 0.6 mm, Esslinger .60 mm thickness O-ring gaskets (84.314.60), size 32 mm, pack of 3.
 - **Crown O-ring**: 3.0 × 0.5 mm (OD 4.0), nitrile 70: Polymax (UK) part 3X0.5N70. It's only needed for final assembly, not for the print.
@@ -82,7 +82,7 @@ The goal is about 3 ATM (rain, hand-washing and splashes; no swimming), with the
   | Movement ring | 0.1 per side | 0.05 per side |
 
   The crystal seat (34.80), the O-ring grooves and the screw seats are the same for print and CNC.
-- **Thinnest walls on the print** (from `check_fits.py`): 0.38 mm at the mouth of each pilot hole, where the bore lead-in passes; 0.53 mm higher up; 0.48 mm at the screw-head seat edge; 0.57 mm between the crown's O-ring groove and its pyramids; and 0.99 mm of plate under each screw head. Each screw grips 3.0 mm into the body.
+- **Thinnest walls on the print** (from `check_fits.py`): 0.38 mm at the mouth of each pilot hole, where the bore lead-in passes; 0.53 mm higher up; 0.48 mm at the screw-head seat edge; 0.57 mm between the crown's O-ring groove and its pyramids; and 0.79 mm of plate under each screw head. Each screw grips 3.1 mm into the body.
 - A printed crown won't hold the stem's thread for long. For test fits, glue the stem in once it's cut to length.
 
 ## Before CNC
