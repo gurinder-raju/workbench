@@ -31,7 +31,7 @@ A prototype 42 mm lugless watch case with the crown at 12, and a 22 mm strap tha
 | | V9 |
 |---|---|
 | Case diameter | **42.0** |
-| Bezel inner edge (polished roll starts) | **35.2** (0.838 × diameter; just outside the crystal gasket) |
+| Bezel inner edge (polished roll starts) | **35.27** (0.840 × diameter; just outside the crystal gasket) |
 | Visible dial | **32.4** (0.774 × diameter) |
 | Total thickness | **13.75** |
 | Thickness / diameter | **0.327** |
@@ -50,7 +50,7 @@ The goal is about 3 ATM (rain, hand-washing and splashes; no swimming), with the
 
 | Seal | How it works | Part | Fit (from `check_fits.py`) |
 |---|---|---|---|
-| **Crystal** | A plastic I-ring gasket around the crystal. A watchmaker presses crystal and gasket into the seat together. | Hytrel "I" gasket, **34.0 mm** inside, **0.45** wall, 0.90 high | Gasket 34.90 free in a **34.80** seat: 0.05 squeeze per side |
+| **Crystal** | A plastic I-ring gasket around the crystal. A watchmaker presses crystal and gasket into the seat together. | Hytrel "I" gasket, **34.0 mm** inside, 0.90 high. Listed as a 0.45 wall; measured **0.47–0.50** | Gasket about 34.97 free in a **34.87** seat: 0.05 squeeze per side (0.035–0.065 across the measured range) |
 | **Caseback** | A spigot on the caseback enters the movement bore. An O-ring in a groove on the spigot seals against the bore wall, so the seal doesn't depend on screw torque. The spigot also centres the caseback, so no dowel pins are needed. A 30° lead-in at the bore mouth keeps the O-ring from being cut. | O-ring **32.0 × 0.6** | Groove Ø32.54, 1.7 % stretch, 20 % squeeze, 74 % groove fill |
 | **Crown** | An O-ring sits in a groove inside the crown and seals on the outside of the crown tube's 3.0 mm end. The tube is the wear surface, and a watchmaker can replace it at service. | O-ring **3.0 × 0.5** | Groove Ø3.84, 16 % squeeze, 72 % fill. The tube end engages the crown 1.8 mm |
 
@@ -81,7 +81,7 @@ The goal is about 3 ATM (rain, hand-washing and splashes; no swimming), with the
   | Crown stem hole | 0.80; screw the stem in | Tap 10 (0.90 thread) |
   | Movement ring | 0.1 per side | 0.05 per side |
 
-  The crystal seat (34.80), the O-ring grooves and the screw seats are the same for print and CNC.
+  The crystal seat (34.87), the O-ring grooves and the screw seats are the same for print and CNC.
 - **Thinnest walls on the print** (from `check_fits.py`): 0.38 mm at the mouth of each pilot hole, where the bore lead-in passes; 0.53 mm higher up; 0.48 mm at the screw-head seat edge; 0.57 mm between the crown's O-ring groove and its pyramids; and 0.79 mm of plate under each screw head. Each screw grips 3.1 mm into the body.
 - A printed crown won't hold the stem's thread for long. For test fits, glue the stem in once it's cut to length.
 
