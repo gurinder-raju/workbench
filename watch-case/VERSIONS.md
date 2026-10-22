@@ -12,9 +12,10 @@ How the case evolved, one version at a time: what changed, why, and the numbers.
 | V4 | 2026-10-13 | 42.0 | 45.1 | 12.5 | Enclosed caseback, domed top, bigger crown |
 | V7 | 2026-10-13 | 42.2 | 45.1 | 11.5 | Symmetric roundover, upper curve matched to the lower |
 | V8 | 2026-10-13 | 42.0 | 44.8 | 13.75 | Rebuilt as a parametric design around a real movement |
-| V9 | 2026-10-15 to 10-20 | 42.0 | 44.8 | 13.75 | Sealed for water resistance, then fitted to measured parts |
+| V9 | 2026-10-15 | 42.0 | 44.8 | 13.75 | Sealed for water resistance |
+| V10 | 2026-10-19 to 10-21 | 42.0 | 44.8 | 13.75 | Fitted to the real dial, screws and crystal gasket |
 
-All dimensions in mm. V8 and V9 are taller because they're the first versions built around a real movement, dial, hands and crystal stack.
+All dimensions in mm. V8 onwards are taller because they're the first versions built around a real movement, dial, hands and crystal stack.
 
 ---
 
@@ -101,9 +102,11 @@ All dimensions in mm. V8 and V9 are taller because they're the first versions bu
 
 **Why:** to move from a display prototype to a wearable watch, and to make the last print test the same sealing design that goes to the metal case.
 
-### V9 refinements from measured parts
+## V10: fitted to measured parts
 
-Once the real parts arrived, each was measured and the design adjusted to match:
+![V10 section](GH_watch_case_V10_42mm/GH_watch_case_V10_section.png)
+
+**Changed from V9:** once the real parts arrived, each was measured with calipers and the design adjusted to match. The outside of the watch is unchanged.
 
 | Date | Part | Measured | Change |
 |---|---|---|---|
@@ -111,5 +114,7 @@ Once the real parts arrived, each was measured and the design adjusted to match:
 | 10-20 | Caseback screws | Head 0.66 mm thick, not 0.5 | Screw seats deepened 0.50 → 0.70 mm so the heads sit just below the tunnel ceiling |
 | 10-20 | Crystal gasket | Wall 0.47–0.50 mm, not 0.45 | Crystal seat opened 34.80 → 34.87 mm to keep a 0.05 mm squeeze per side |
 | 10-19–20 | Crown tubes, crystal, caseback O-ring | Within spec | No change |
+
+**Why:** the last print before the metal case should be built around the parts that will actually go in it, not catalogue numbers.
 
 **Next:** measure the movement's stem height, then the final resin print, then the metal case.

@@ -6,7 +6,7 @@ A prototype 42 mm lugless watch case with the crown at 12, and a 22 mm strap tha
 
 ## About this project
 
-A personal, non-commercial project: one watch, designed and built by me with AI assistance. I used Claude (Anthropic) as a design and engineering partner, for the parametric CAD, fit checks, sealing design, supplier research and drawings. I directed the design, made the decisions, measured the real parts and iterated over nine versions, recorded one commit at a time.
+A personal, non-commercial project: one watch, designed and built by me with AI assistance. I used Claude (Anthropic) as a design and engineering partner, for the parametric CAD, fit checks, sealing design, supplier research and drawings. I directed the design, made the decisions, measured the real parts and iterated it version by version, recorded one commit at a time.
 
 This is my own design and CAD work. It is not affiliated with or endorsed by any watch brand, and it carries no third-party trademarks or logos.
 
@@ -14,9 +14,9 @@ This is my own design and CAD work. It is not affiliated with or endorsed by any
 
 © 2026 Gurinder Raju. All rights reserved.
 
-**Current version: V9.** V9 is V8 with all three seals designed in: a gasketed crystal seat, an O-ring on the caseback, and an O-ring inside the crown. It's the last print before CNC.
+**Current version: V10.** V10 is V9 (all three seals designed in: a gasketed crystal seat, an O-ring on the caseback, and an O-ring inside the crown) fitted to the measured parts: the 0.61 mm steel dial, the real screw heads and the real crystal gasket. It's the last print before CNC.
 
-![V9 section](GH_watch_case_V9_42mm/GH_watch_case_V9_section.png)
+![V10 section](GH_watch_case_V10_42mm/GH_watch_case_V10_section.png)
 
 ## Design evolution
 
@@ -30,11 +30,12 @@ Every version, cut through the 12-6 axis (crown and strap tunnel) and the 3-9 ax
 | V4 | Enclosed caseback and a rounded top | [V4](GH_watch_case_V4_section.png) |
 | V7 | Symmetric roundover: upper curvature matched to the lower shell | [V7](GH_watch_case_V7_section.png) |
 | V8 | Rebuilt as a parametric CAD model: one continuous curvature-smooth profile, crown at 12, short 14 mm strap bridge, M1.4 caseback screws, Miyota 9039 stack | [V8](GH_watch_case_V8_42mm/GH_watch_case_V8_section.png) |
-| V9 | Sealed for water resistance: gasketed crystal, caseback O-ring and crown O-ring, sized from measured parts | [V9](GH_watch_case_V9_42mm/GH_watch_case_V9_section.png) |
+| V9 | Sealed for water resistance: gasketed crystal, caseback O-ring and crown O-ring | [V9](GH_watch_case_V9_42mm/GH_watch_case_V9_section.png) |
+| V10 | Fitted to measured parts: 0.61 mm dial (thinner caseback, same height), deeper screw seats, crystal seat sized to the real gasket | [V10](GH_watch_case_V10_42mm/GH_watch_case_V10_section.png) |
 
 ## Key dimensions
 
-| | V9 |
+| | V10 |
 |---|---|
 | Case diameter | **42.0** |
 | Bezel inner edge (polished roll starts) | **35.27** (0.840 × diameter; just outside the crystal gasket) |
