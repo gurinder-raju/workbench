@@ -20,7 +20,7 @@ This is my own design and CAD work. It is not affiliated with or endorsed by any
 
 ## Design evolution
 
-Every version, cut through the 12-6 axis (crown and strap tunnel) and the 3-9 axis. V5 and V6 were never built.
+Every version, cut through the 12-6 axis (crown and strap tunnel) and the 3-9 axis. V5 and V6 were never built. The full story, with what changed in each version, why, and the numbers, is in **[VERSIONS.md](VERSIONS.md)**.
 
 | Version | What changed | Section |
 |---|---|---|
