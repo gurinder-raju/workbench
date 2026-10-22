@@ -1,6 +1,6 @@
 # workbench
 
-Build and make projects: prototypes and iteration notes.
+Build and make projects: physical prototypes and iteration notes.
 
 | Project | Description |
 |---|---|

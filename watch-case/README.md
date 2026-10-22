@@ -73,6 +73,8 @@ The outer profile is one curvature-continuous curve, so polished reflections flo
 
 The goal is about 3 ATM (rain, hand-washing and splashes; no swimming), with the crown pushed in.
 
+The squeeze, stretch and groove-fill numbers below can be reproduced with [`tools/seal_calc.py`](tools/seal_calc.py), a small calculator for O-rings and crystal gaskets.
+
 | Seal | How it works | Part | Fit (checked in CAD) |
 |---|---|---|---|
 | **Crystal** | A plastic I-ring gasket around the crystal. A watchmaker presses crystal and gasket into the seat together. | Hytrel "I" gasket, **34.0 mm** inside, 0.90 high. Listed as a 0.45 wall; measured **0.47–0.50** | Gasket about 34.97 free in a **34.87** seat: 0.05 squeeze per side (0.035–0.065 across the measured range) |
