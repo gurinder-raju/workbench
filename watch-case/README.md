@@ -1,5 +1,7 @@
 # watch-case
 
+> The CAD source, STL and STEP files for this project are kept in a private repository. This repository holds the design notes, version history and section diagrams.
+
 A prototype 42 mm lugless watch case with the crown at 12, and a 22 mm strap that runs under a short bridge. It's for a personal build with a Miyota 9039 movement. Each version is one commit; V1 to V7 are single STL files, and from V8 on the case is a parametric CAD model.
 
 ## About this project
