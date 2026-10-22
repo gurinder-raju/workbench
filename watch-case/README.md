@@ -2,6 +2,16 @@
 
 A prototype 42 mm lugless watch case with the crown at 12, and a 22 mm strap that runs under a short bridge. It's for a personal build with a Miyota 9039 movement. Each version is one commit; V1 to V7 are single STL files, and from V8 on the case is a parametric CAD model.
 
+## About this project
+
+A personal, non-commercial project: one watch, designed and built by me with AI assistance. I used Claude (Anthropic) as a design and engineering partner, for the parametric CAD, fit checks, sealing design, supplier research and drawings. I directed the design, made the decisions, measured the real parts and iterated over nine versions, recorded one commit at a time.
+
+This is my own design and CAD work. It is not affiliated with or endorsed by any watch brand, and it carries no third-party trademarks or logos.
+
+**No warranty.** These files are shared as-is for viewing and learning. They're untested as a water-resistant watch case, so use them at your own risk.
+
+© 2026 Gurinder Raju. All rights reserved.
+
 ## Layout
 
 | Path | What it is |
