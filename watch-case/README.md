@@ -14,6 +14,24 @@ This is my own design and CAD work. It is not affiliated with or endorsed by any
 
 © 2026 Gurinder Raju. All rights reserved.
 
+## How it was made
+
+The case went through the same loop many times:
+
+1. **Design:** sketch the change, then build it as a precise 3D model.
+2. **Check:** before anything is made, test the fit virtually: screws, seals, crown and movement against each other, wall thicknesses and clearances.
+3. **Print:** a resin prototype to hold, wear and judge by eye. The first print is what drove V4.
+4. **Measure:** once real parts arrived (crown tubes, crystal, gaskets, screws), each was measured with calipers. Where reality differed from the catalogue, the design changed to match. That's V10.
+5. **Record:** one commit per version, with what changed and why. See [VERSIONS.md](VERSIONS.md).
+
+AI did much of the heavy lifting: modelling, fit calculations, sourcing parts and suppliers, and drafting quotes and drawings. The direction, taste and final calls were mine.
+
+## Status
+
+- **Now:** V10 is ready to print, waiting on one last measurement from the real movement (where its stem sits).
+- **Next:** a final resin prototype to test every fit with real parts, then a metal case (CNC-machined steel, mirror-polished).
+- **Dial and hands:** a UV-printed steel dial is on order; custom hands are being quoted.
+
 **Current version: V10.** V10 is V9 (all three seals designed in: a gasketed crystal seat, an O-ring on the caseback, and an O-ring inside the crown) fitted to the measured parts: the 0.61 mm steel dial, the real screw heads and the real crystal gasket. It's the last print before CNC.
 
 ![V10 section](GH_watch_case_V10_42mm/GH_watch_case_V10_section.png)
