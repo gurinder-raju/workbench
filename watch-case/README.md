@@ -28,7 +28,7 @@ AI did much of the heavy lifting: modelling, fit calculations, sourcing parts an
 
 ## Status
 
-- **Now:** V10 is ready to print, waiting on one last measurement from the real movement (where its stem sits).
+- **Now:** V10 is ready to print. The real movement arrived on 2026-10-24, and its measurements match the design, stem height included.
 - **Next:** a final resin prototype to test every fit with real parts, then a metal case (CNC-machined steel, mirror-polished).
 - **Dial and hands:** a UV-printed steel dial is on order; custom hands are being quoted.
 
@@ -83,9 +83,9 @@ The squeeze, stretch and groove-fill numbers below can be reproduced with [`tool
 
 ## Parts to buy
 
-- **Movement**: Miyota 9039 (no date, 3 hands, 26.0 × 3.90 mm). Mount it rotated 90° so the stem exits at 12, and print the dial with 12 at the crown.
+- **Movement**: Miyota 9039 (no date, 3 hands, 26.0 × 3.90 mm). Mount it rotated 90° so the stem exits at 12, and print the dial with 12 at the crown. Measured on the real movement: 3.90 mm from the rotor to the raised centre plate the dial sits on (the outer rim is 0.35 mm lower); stem body Ø1.10, its centre 2.35 mm above the rotor, which is 1.55 mm below the dial side. The spacer and the two dial-fixing screws supplied with it aren't used, because this dial has no feet.
 - **Crystal**: flat, Ø34.0 × 1.2 mm (mineral for the prototype, sapphire later).
-- **Dial**: Ø33.4 × 0.61 mm (0.024" UV-printed stainless steel, laser-cut with a 2.0 mm centre hole), with Ø32.4 visible. It's clamped between the rehaut and the movement ring. It has no dial feet, so fix it to the movement with dial dots (thin adhesive pads). The caseback plate was thinned from 1.60 to 1.49 mm for this dial, so the case stays 13.75 mm. If a 0.50 mm dial is used instead, the caseback plate goes back to 1.60 mm. Don't shim or raise the ring: that lifts the movement and puts the stem off-centre in the crown tube.
+- **Dial**: Ø33.4 × 0.61 mm (0.024" UV-printed stainless steel, laser-cut with a 0.08" (2.03 mm) centre hole to clear the Ø1.52 hour wheel), with Ø32.4 visible. It's clamped between the rehaut and the movement ring. It has no dial feet, so fix it to the movement with dial dots (thin adhesive pads). The caseback plate was thinned from 1.60 to 1.49 mm for this dial, so the case stays 13.75 mm. If a 0.50 mm dial is used instead, the caseback plate goes back to 1.60 mm. Don't shim or raise the ring: that lifts the movement and puts the stem off-centre in the crown tube.
 - **Crown tube**: **80.135.42**: 2.5 mm case end, 3.0 mm crown end that's 2.5 mm long, 5.5 mm overall (Esslinger/Ofrei 80.135 series). The tube's shoulder sits in a 0.5 mm pocket, so 2.0 mm of the crown end stands proud and no filing is needed. The print hole is 2.7 mm, so glue the tube in.
 - **Caseback screws**: 4 × **M1.4 × 4 mm** stainless, flat round (wafer) head, flat underneath, 0.3 mm pitch. Measured on the screws in hand: head Ø2.4 × 0.66 mm, 3.89 mm under the head, thread 1.35 mm. The head sits 0.04 mm below the tunnel ceiling in a Ø2.9 × 0.70 mm seat. There are two at 12 and two at 6, in the strap channel just past the bridge. Each screw grips 3.1 mm into the case.
 - **Crystal gasket**: Esslinger individual Hytrel "I" gasket, 34.0 mm (series 84.045, about $6).

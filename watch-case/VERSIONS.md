@@ -114,7 +114,8 @@ All dimensions in mm. V8 onwards are taller because they're the first versions b
 | 10-20 | Caseback screws | Head 0.66 mm thick, not 0.5 | Screw seats deepened 0.50 → 0.70 mm so the heads sit just below the tunnel ceiling |
 | 10-20 | Crystal gasket | Wall 0.47–0.50 mm, not 0.45 | Crystal seat opened 34.80 → 34.87 mm to keep a 0.05 mm squeeze per side |
 | 10-19–20 | Crown tubes, crystal, caseback O-ring | Within spec | No change |
+| 10-24 | Movement (Miyota 9039) | 3.90 mm to the raised centre plate (outer rim 0.35 lower); stem Ø1.10, centre 2.35 mm above the rotor | No change: the stem sits 1.55 mm below the dial side, as designed |
 
 **Why:** the last print before the metal case should be built around the parts that will actually go in it, not catalogue numbers.
 
-**Next:** measure the movement's stem height, then the final resin print, then the metal case.
+**Next:** the final resin print, then the metal case.
