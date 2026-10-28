@@ -28,13 +28,13 @@ AI did much of the heavy lifting: modelling, fit calculations, sourcing parts an
 
 ## Status
 
-- **Now:** V10 is ready to print. The real movement arrived on 2026-10-24, and its measurements match the design, stem height included.
-- **Next:** a final resin prototype to test every fit with real parts, then a metal case (CNC-machined steel, mirror-polished).
-- **Dial and hands:** a UV-printed steel dial is on order; custom hands are being quoted.
+- **Now:** V10 is printed and being test-fitted with the real movement, dial and parts. V11 fixes what that turned up: the movement's full-length stem didn't reach far enough into the crown.
+- **Next:** a reprinted crown for the prototype, the strap tunnel sized to the chosen strap, then a metal case (CNC-machined steel, mirror-polished).
+- **Dial and hands:** the UV-printed steel dials have arrived (a recut at the right size is requested), and custom hands are being ordered.
 
-**Current version: V10.** V10 is V9 (all three seals designed in: a gasketed crystal seat, an O-ring on the caseback, and an O-ring inside the crown) fitted to the measured parts: the 0.61 mm steel dial, the real screw heads and the real crystal gasket. It's the last print before CNC.
+**Current version: V11.** V11 is V10 with the crown fitted to the movement's full-length stem. Test-fitting the V10 print showed the stem reaching only 0.25 mm into the crown's thread, so 0.75 mm comes off the crown tube's outer end and the crown's bore is 1.25 mm deep instead of 2.0: the stem now screws 1.0 mm into the crown. The movement ring's stem slot also runs its full height. The case and the outside of the watch are unchanged.
 
-![V10 section](GH_watch_case_V10_42mm/GH_watch_case_V10_section.png)
+![V11 section](GH_watch_case_V11_42mm/GH_watch_case_V11_section.png)
 
 ## Design evolution
 
@@ -50,10 +50,11 @@ Every version, cut through the 12-6 axis (crown and strap tunnel) and the 3-9 ax
 | V8 | Rebuilt as a parametric CAD model: one continuous curvature-smooth profile, crown at 12, short 14 mm strap bridge, M1.4 caseback screws, Miyota 9039 stack | [V8](GH_watch_case_V8_42mm/GH_watch_case_V8_section.png) |
 | V9 | Sealed for water resistance: gasketed crystal, caseback O-ring and crown O-ring | [V9](GH_watch_case_V9_42mm/GH_watch_case_V9_section.png) |
 | V10 | Fitted to measured parts: 0.61 mm dial (thinner caseback, same height), deeper screw seats, crystal seat sized to the real gasket | [V10](GH_watch_case_V10_42mm/GH_watch_case_V10_section.png) |
+| V11 | Crown fitted to the full-length stem: crown tube's outer end cut 0.75 mm, crown bore 1.25 mm deep; full-height stem slot in the movement ring | [V11](GH_watch_case_V11_42mm/GH_watch_case_V11_section.png) |
 
 ## Key dimensions
 
-| | V10 |
+| | V11 |
 |---|---|
 | Case diameter | **42.0** |
 | Bezel inner edge (polished roll starts) | **35.27** (0.840 × diameter; just outside the crystal gasket) |
@@ -79,14 +80,14 @@ The squeeze, stretch and groove-fill numbers below can be reproduced with [`tool
 |---|---|---|---|
 | **Crystal** | A plastic I-ring gasket around the crystal. A watchmaker presses crystal and gasket into the seat together. | Hytrel "I" gasket, **34.0 mm** inside, 0.90 high. Listed as a 0.45 wall; measured **0.47–0.50** | Gasket about 34.97 free in a **34.87** seat: 0.05 squeeze per side (0.035–0.065 across the measured range) |
 | **Caseback** | A spigot on the caseback enters the movement bore. An O-ring in a groove on the spigot seals against the bore wall, so the seal doesn't depend on screw torque. The spigot also centres the caseback, so no dowel pins are needed. A 30° lead-in at the bore mouth keeps the O-ring from being cut. | O-ring **32.0 × 0.6** | Groove Ø32.54, 1.7 % stretch, 20 % squeeze, 74 % groove fill |
-| **Crown** | An O-ring sits in a groove inside the crown and seals on the outside of the crown tube's 3.0 mm end. The tube is the wear surface, and a watchmaker can replace it at service. | O-ring **3.0 × 0.5** | Groove Ø3.84, 16 % squeeze, 72 % fill. The tube end engages the crown 1.8 mm |
+| **Crown** | An O-ring sits in a groove inside the crown and seals on the outside of the crown tube's 3.0 mm end. The tube is the wear surface, and a watchmaker can replace it at service. | O-ring **3.0 × 0.5** | Groove Ø3.84, 16 % squeeze, 72 % fill. Pushed in, the tube end engages the crown 1.05 mm. Pulled out to set the time (0.84 mm), the O-ring clears the tube's chamfered end and slides back on |
 
 ## Parts to buy
 
 - **Movement**: Miyota 9039 (no date, 3 hands, 26.0 × 3.90 mm). Mount it rotated 90° so the stem exits at 12, and print the dial with 12 at the crown. Measured on the real movement: 3.90 mm from the rotor to the raised centre plate the dial sits on (the outer rim is 0.35 mm lower); stem body Ø1.10, its centre 2.35 mm above the rotor, which is 1.55 mm below the dial side. The spacer and the two dial-fixing screws supplied with it aren't used, because this dial has no feet.
 - **Crystal**: flat, Ø34.0 × 1.2 mm (mineral for the prototype, sapphire later).
 - **Dial**: Ø33.4 × 0.61 mm (0.024" UV-printed stainless steel, laser-cut with a 0.08" (2.03 mm) centre hole to clear the Ø1.52 hour wheel), with Ø32.4 visible. It's clamped between the rehaut and the movement ring. It has no dial feet, so fix it to the movement with dial dots (thin adhesive pads). The caseback plate was thinned from 1.60 to 1.49 mm for this dial, so the case stays 13.75 mm. If a 0.50 mm dial is used instead, the caseback plate goes back to 1.60 mm. Don't shim or raise the ring: that lifts the movement and puts the stem off-centre in the crown tube.
-- **Crown tube**: **80.135.42**: 2.5 mm case end, 3.0 mm crown end that's 2.5 mm long, 5.5 mm overall (Esslinger/Ofrei 80.135 series). The tube's shoulder sits in a 0.5 mm pocket, so 2.0 mm of the crown end stands proud and no filing is needed. The print hole is 2.7 mm, so glue the tube in.
+- **Crown tube**: **80.135.42**: 2.5 mm case end, 3.0 mm crown end that's 2.5 mm long, 5.5 mm overall (Esslinger/Ofrei 80.135 series). Cut 0.75 mm off the crown end, leaving it 1.75 mm long, and chamfer the cut edge. The tube's shoulder sits in a 0.5 mm pocket, so 1.25 mm stands proud, and a full-length stem screws 1.0 mm into the crown. The print hole is 2.7 mm, so glue the tube in.
 - **Caseback screws**: 4 × **M1.4 × 4 mm** stainless, flat round (wafer) head, flat underneath, 0.3 mm pitch. Measured on the screws in hand: head Ø2.4 × 0.66 mm, 3.89 mm under the head, thread 1.35 mm. The head sits 0.04 mm below the tunnel ceiling in a Ø2.9 × 0.70 mm seat. There are two at 12 and two at 6, in the strap channel just past the bridge. Each screw grips 3.1 mm into the case.
 - **Crystal gasket**: Esslinger individual Hytrel "I" gasket, 34.0 mm (series 84.045, about $6).
 - **Caseback O-ring**: 32.0 × 0.6 mm, Esslinger .60 mm thickness O-ring gaskets (84.314.60), size 32 mm, pack of 3.

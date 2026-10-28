@@ -14,6 +14,7 @@ How the case evolved, one version at a time: what changed, why, and the numbers.
 | V8 | 2026-10-13 | 42.0 | 44.8 | 13.75 | Rebuilt as a parametric design around a real movement |
 | V9 | 2026-10-15 | 42.0 | 44.8 | 13.75 | Sealed for water resistance |
 | V10 | 2026-10-19 to 10-21 | 42.0 | 44.8 | 13.75 | Fitted to the real dial, screws and crystal gasket |
+| V11 | 2026-10-28 | 42.0 | 44.8 | 13.75 | Crown fitted to the movement's full-length stem |
 
 All dimensions in mm. V8 onwards are taller because they're the first versions built around a real movement, dial, hands and crystal stack.
 
@@ -119,3 +120,24 @@ All dimensions in mm. V8 onwards are taller because they're the first versions b
 **Why:** the last print before the metal case should be built around the parts that will actually go in it, not catalogue numbers.
 
 **Next:** the final resin print, then the metal case.
+
+## V11: crown fitted to the stem
+
+![V11 section](GH_watch_case_V11_42mm/GH_watch_case_V11_section.png)
+
+**Changed from V10:** test-fitting the V10 print with the real movement showed that the movement's stem, at full length, reached only 0.25 mm into the crown's thread, not enough to hold the crown. Miyota's case-fitting drawing confirms it: pushed in, the stem's tip is 22.80 mm from the movement's centre. V11 brings the crown's thread to the stem. The case and the crown's outside are unchanged.
+
+| Part | V10 | V11 |
+|---|---|---|
+| Crown tube's 3.0 mm end | 2.5 mm long, 2.0 mm proud of the case | 0.75 mm cut off and chamfered: 1.75 mm long, 1.25 mm proud |
+| Crown bore over the tube | 2.0 mm deep | 1.25 mm deep, so the stem hole starts 0.75 mm sooner |
+| Stem thread in the crown | 0.25 mm | 1.0 mm |
+| Movement ring's stem slot | Stopped 0.05 mm short of the ring's bottom | Runs the ring's full height |
+
+**Why not a threaded pipe in the crown?** That's the usual way to reach a short stem, but the tube's bore (about 1.3 mm) is too small for a pipe around the stem's 0.9 mm thread.
+
+**Trade-off:** pulled out to set the time, the crown moves 0.84 mm and still covers 0.21 mm of the tube, but its O-ring comes off the tube's end. It stays in its groove in the crown and slides back on over the chamfer when the crown is pushed in. The crown only has to seal when pushed in.
+
+**Also checked on the V10 print (10-28):** the dial can sit straight on the movement without Miyota's spacer ring (setting the time feels the same with it on); the seconds post ends about 1.3 mm above the dial, leaving 0.85 mm under the crystal; and the rotor spins freely with the caseback on.
+
+**Next:** the strap tunnel sized to the chosen strap (V12), then the metal case.
