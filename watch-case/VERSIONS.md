@@ -140,4 +140,4 @@ All dimensions in mm. V8 onwards are taller because they're the first versions b
 
 **Also checked on the V10 print (10-28):** the dial can sit straight on the movement without Miyota's spacer ring (setting the time feels the same with it on); the seconds post ends about 1.3 mm above the dial, leaving 0.85 mm under the crystal; and the rotor spins freely with the caseback on.
 
-**Next:** the strap tunnel sized to the chosen strap (V12), then the metal case.
+**Next:** a reprinted V11 crown to finish the prototype; then V12, with the strap tunnel sized to the chosen strap, a 0.25 mm recess under the rotor, and casing clamps to hold the movement in place of dial dots. The metal case is cut straight from V12, with no more resin prints.

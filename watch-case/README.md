@@ -29,7 +29,7 @@ AI did much of the heavy lifting: modelling, fit calculations, sourcing parts an
 ## Status
 
 - **Now:** V10 is printed and being test-fitted with the real movement, dial and parts. V11 fixes what that turned up: the movement's full-length stem didn't reach far enough into the crown.
-- **Next:** a reprinted crown for the prototype, the strap tunnel sized to the chosen strap, then a metal case (CNC-machined steel, mirror-polished).
+- **Next:** a reprinted crown to finish the prototype, then the metal case (CNC-machined steel, mirror-polished), cut from V12 with no more resin prints. V12 sizes the strap tunnel to the chosen strap, adds a 0.25 mm recess under the rotor, and holds the movement with casing clamps.
 - **Dial and hands:** the UV-printed steel dials have arrived (a recut at the right size is requested), and custom hands are being ordered.
 
 **Current version: V11.** V11 is V10 with the crown fitted to the movement's full-length stem. Test-fitting the V10 print showed the stem reaching only 0.25 mm into the crown's thread, so 0.75 mm comes off the crown tube's outer end and the crown's bore is 1.25 mm deep instead of 2.0: the stem now screws 1.0 mm into the crown. The movement ring's stem slot also runs its full height. The case and the outside of the watch are unchanged.
